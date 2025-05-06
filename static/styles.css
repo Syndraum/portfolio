@@ -1,0 +1,67 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import "tailwindcss";
+
+@font-face {
+	font-family: WorkSans;
+	src: url("/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-primary: var(--color-cyan-700);
+	--color-title: var(--color-primary);
+	--color-subtitle: var(--color-stone-900);
+
+	--font-worksans: WorkSans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+}
+
+:root {
+	--color-card: var(--color-stone-100);
+	--color-card-text: var(--color-stone-500);
+	--color-card-subtext: var(--color-stone-400);
+	--color-card-border: var(--color-stone-300);
+	--color-card-hover: var(--color-stone-50);
+
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/random_static.png") repeat, url("/gradient-light.webp") 50% / cover no-repeat;
+	@apply bg-fixed;
+
+	@variant dark {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/random_static.png") repeat, url("/gradient-dark.webp") 50% / cover no-repeat;
+		@apply bg-fixed;
+		--color-primary: var(--color-cyan-400);
+		--color-subtitle: var(--color-stone-100);
+
+		--color-card: --alpha(var(--color-stone-900) / 70%);
+		--color-card-text: var(--color-stone-400);
+		--color-card-subtext: var(--color-stone-500);
+		--color-card-border: var(--color-stone-600);
+		--color-card-hover: --alpha(var(--color-stone-900) / 90%);
+	}
+
+	font-family: var(--font-worksans);
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a {
+	color: var(--color-primary);
+}
