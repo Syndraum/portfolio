@@ -1,4 +1,4 @@
-import { IconAtom, Logo } from "#icons"
+import { IconAtom, IconHeart, Logo } from "#icons"
 import { StickyColumn } from "/components/StickyColumn.tsx";
 import { Title } from "/components/Title.tsx";
 import { PresentationCard } from "/components/PresentationCard.tsx";
@@ -39,8 +39,13 @@ export default function Home(props: PageProps<HomeProps>) {
 							<Contact />
 						</div>
 					</div>
-					<div class="text-(--color-card-text)">
-						Inspiré par <a href="https://nerdy.dev/" target="_blank">Adam Argyle</a> et <a href="https://natalie.sh" target="_blank">Natalie</a>
+					<div class="flex flex-col text-(--color-card-text)">
+						<div class="flex gap-x-1 items-center">
+							Conçu avec <div class="h-4 w-4 text-rose-700 fill-current"><IconHeart /></div> par moi.
+						</div>
+						<div>
+							Inspiré par <a href="https://nerdy.dev/" target="_blank">Adam Argyle</a> et <a href="https://natalie.sh" target="_blank">Natalie</a>.
+						</div>
 					</div>
 				</div>
 			</StickyColumn>
