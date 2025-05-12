@@ -7,7 +7,7 @@ import { ProjectCard } from "/components/ProjectCard.tsx";
 import ThemeButton from "/islands/ThemeButton.tsx";
 import { ProjectType } from "/types/ProjectType.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { getlistProjects } from "../notion/index.ts";
+import { getlistProjects } from "/notion/index.ts";
 
 interface HomeProps {
 	projects: ProjectType[]
@@ -28,7 +28,7 @@ export default function Home(props: PageProps<HomeProps>) {
 					<div class="flex flex-col gap-y-5">
 						<div class="flex justify-between items-center">
 							<Title>
-								<Logo width="80px"/>
+								<Logo width={80}/>
 							</Title>
 							<div class="flex gap-x-2">
 								<ThemeButton />
