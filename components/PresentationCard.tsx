@@ -15,7 +15,7 @@ export function PresentationCard() {
 					</div>
 				</div>
 				<div class="text-base/5 text-(--color-card-text)">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor  posuere erat, mollis faucibus mauris volutpat a. Sed sagittis egestas  dictum. Sed pretium dolor et aliquam accumsan. Ut fringilla rutrum urna  faucibus porttitor. 
+				Je crée, conçois et code des sites web et logiciels. Si  mon travail vous plaît, n'hésitez pas à me contacter !
 				</div>
 			</div>
 		</Card>
