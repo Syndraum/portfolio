@@ -23,7 +23,7 @@ function decodeNotionProject(dto: NotionProjectDTO) : ProjectType {
 		image: extractUrlFileProperties(dto.photo),
 		github: extractUrlProperty(dto.github),
 		url: extractUrlProperty(dto.url),
-		create_at: extractDateProperties(dto.create_at) || new Date()
+		create_at: extractDateProperties(dto.create_at)
 	}
 }
 

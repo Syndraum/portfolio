@@ -51,10 +51,10 @@ export function ProjectCard({project} : ProjectCardProps) {
 						}
 					</div>
 					<div class="text-xs font-light text-(--color-card-subtext)">
-						{project.create_at.toLocaleDateString("FR-fr", {
+						{project.create_at?.toLocaleDateString("FR-fr", {
 							month: "short",
 							year: "numeric"
-						}).toUpperCase().replace(".", "")}
+						}).toUpperCase().replace(".", "") || "EN COUR"}
 					</div>
 				</div>
 			</div>

@@ -6,5 +6,5 @@ export type ProjectType = {
 	image?: string
 	github?: string
 	url?: string
-	create_at: Date
+	create_at?: Date
 }
