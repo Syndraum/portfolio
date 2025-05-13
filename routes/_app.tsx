@@ -12,8 +12,8 @@ export default function App({ Component }: PageProps) {
         <link rel="icon" type="image/svg+xml" href={asset("/favicon.svg")} />
       </head>
       <body>
-        <div id="app">
-          <main class="px-4 md:px-6 lg:px-[100px] my-4 md:my-0">
+        <div id="app" class="flex items-center">
+          <main class="container px-4 md:px-0 xl:px-[100px] my-4 md:my-0">
             <Component />
           </main>
         </div>
