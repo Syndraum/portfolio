@@ -1,4 +1,5 @@
 import { type PageProps } from "$fresh/server.ts";
+import { asset } from "$fresh/runtime.ts";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -8,6 +9,7 @@ export default function App({ Component }: PageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Alvarez Romain - Portfolio</title>
         <link rel="stylesheet" href="/styles.css" />
+        <link rel="icon" type="image/svg+xml" href={asset("/favicon.svg")} />
       </head>
       <body>
         <div id="app">
