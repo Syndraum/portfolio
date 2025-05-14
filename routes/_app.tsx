@@ -13,7 +13,7 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <div id="app" class="flex items-center">
-          <main class="container px-4 md:px-0 xl:px-[100px] my-4 md:my-0">
+          <main class="2xl:container px-4 md:px-6 xl:px-[100px] my-4 md:my-0">
             <Component />
           </main>
         </div>
