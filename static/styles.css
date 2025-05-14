@@ -1,6 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 @import "tailwindcss";
 
 @font-face {
@@ -25,11 +22,18 @@
 	--color-card-border: var(--color-stone-300);
 	--color-card-hover: var(--color-stone-50);
 
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/random_static.png") repeat, url("/gradient-light.webp") 50% / cover no-repeat;
+	--color-filter-light: rgb(255 255 255 / 0.5);
+	--color-filter-dark: rgb(0 0 0 / 0.6);
+
+	--bg-noise: url("/random_static.png") repeat;
+	--bg-theme-light: linear-gradient(0deg, var(--color-filter-light), var(--color-filter-light)), var(--bg-noise), url("/gradient-light.webp") 50% / cover no-repeat;
+	--bg-theme-dark: linear-gradient(0deg, var(--color-filter-dark), var(--color-filter-dark)), var(--bg-noise), url("/gradient-dark.webp") 50% / cover no-repeat;
+
+	background: var(--bg-theme-light);
 	@apply bg-fixed;
 
 	@variant dark {
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/random_static.png") repeat, url("/gradient-dark.webp") 50% / cover no-repeat;
+		background: var(--bg-theme-dark);
 		@apply bg-fixed;
 		--color-primary: var(--color-cyan-400);
 		--color-subtitle: var(--color-stone-100);
@@ -50,6 +54,27 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+}
+
+/* Welcome to the * wonderful * world of iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+	body::after {
+		content:"";
+		position:fixed;
+		top:0;
+		height:100vh;
+		left:0;
+		right:0;
+		z-index:-1;
+		background: var(--bg-theme-light);
+		background-attachment: scroll;
+	}
+
+	@variant dark {
+		body::after {
+			background: var(--bg-theme-dark);
+		}
+	}
 }
 
 body {
