@@ -10,6 +10,7 @@ export default function App({ Component }: PageProps) {
         <title>Alvarez Romain - Portfolio</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="icon" type="image/svg+xml" href={asset("/favicon.svg")} />
+        <meta name="description" content="Salut ! Moi c'est Romain, Ingenieur Logiciel ! Bienvenue sur mon portfolio ! Je crée, conçois et code des sites web et logiciels."/>
       </head>
       <body>
         <div id="app" class="flex items-center">
