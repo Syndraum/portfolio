@@ -22,10 +22,10 @@ export const handler: Handlers = {
 
 export default function Home(props: PageProps<HomeProps>) {
 	return (
-		<div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_2fr_1fr] gap-x-5 gap-y-6">
+		<div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_2fr_1fr] gap-x-14 gap-y-8">
 			<StickyColumn h_screen>
 				<div class="flex flex-col gap-y-5 h-full md:justify-between">
-					<div class="flex flex-col gap-y-5">
+					<div class="flex flex-col gap-y-9">
 						<div class="flex justify-between items-center">
 							<Title>
 								<Logo width={80}/>
@@ -34,7 +34,7 @@ export default function Home(props: PageProps<HomeProps>) {
 								<ThemeButton />
 							</div>
 						</div>
-						<div class="flex flex-col gap-y-5">
+						<div class="flex flex-col gap-y-9">
 							<PresentationCard />
 							<Contact />
 						</div>
@@ -49,13 +49,13 @@ export default function Home(props: PageProps<HomeProps>) {
 					</div>
 				</div>
 			</StickyColumn>
-			<div class="flex flex-col gap-y-5 md:py-10">
+			<div class="flex flex-col gap-y-3 md:gap-y-9 md:py-10">
 				<div class="flex items-center h-[44px]">
 					<Title icon={IconAtom}>
 						Mes projets
 					</Title>
 				</div>
-				<div class="flex flex-col gap-y-3">
+				<div class="flex flex-col gap-y-8">
 					{ props.data.projects.map(project => (
 						<ProjectCard key={project.slug} project={project}/>
 					))}

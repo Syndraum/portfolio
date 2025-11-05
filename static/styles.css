@@ -8,22 +8,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--color-primary: var(--color-cyan-700);
-	--color-title: var(--color-primary);
-	--color-subtitle: var(--color-stone-900);
+	--color-primary: var(--color-cyan-600);
+	--color-title: var(--color-cyan-900);
+	--color-subtitle: var(--color-stone-700);
 
 	--font-worksans: WorkSans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
 }
 
 :root {
-	--color-card: var(--color-stone-100);
+	--color-card: --alpha(var(--color-stone-50) / 70%);
 	--color-card-text: var(--color-stone-500);
 	--color-card-subtext: var(--color-stone-400);
 	--color-card-border: var(--color-stone-300);
 	--color-card-hover: var(--color-stone-50);
 
-	--color-filter-light: rgb(255 255 255 / 0.5);
-	--color-filter-dark: rgb(0 0 0 / 0.6);
+	--color-filter-light: rgb(255 255 255 / 0.85);
+	--color-filter-dark: rgb(0 0 0 / 0.85);
 
 	--bg-noise: url("/random_static.png") repeat;
 	--bg-theme-light: linear-gradient(0deg, var(--color-filter-light), var(--color-filter-light)), var(--bg-noise), url("/gradient-light.webp") 50% / cover no-repeat;
@@ -36,7 +36,8 @@
 		background: var(--bg-theme-dark);
 		@apply bg-fixed;
 		--color-primary: var(--color-cyan-400);
-		--color-subtitle: var(--color-stone-100);
+		--color-title: var(--color-stone-100);
+		--color-subtitle: var(--color-stone-300);
 
 		--color-card: --alpha(var(--color-stone-900) / 70%);
 		--color-card-text: var(--color-stone-400);

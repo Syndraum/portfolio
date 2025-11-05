@@ -4,7 +4,7 @@ import { Pastille } from "./Pastille.tsx";
 
 export function Contact() {
 	return (
-		<div class="flex flex-wrap-reverse gap-2">
+		<div class="flex flex-wrap-reverse gap-x-2 gap-y-3">
 			<Pastille href="https://github.com/Syndraum" icon={IconGithub} extern/>
 			<Pastille href="https://linkedin.com/in/roalvare" icon={IconLinkedin} extern/>
 			<Pastille href="mailto:hello@roalvare.dev" icon={IconSendEmail}>
