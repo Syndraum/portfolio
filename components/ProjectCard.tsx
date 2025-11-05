@@ -31,13 +31,14 @@ export function ProjectCard({project} : ProjectCardProps) {
 						/>
 					</div>
 				}
-				<div class="flex justify-between items-end">
+				<div class="flex justify-between items-center gap-x-4">
 					<div class="text-xs font-light text-(--color-card-subtext)">
 						{project.create_at?.toLocaleDateString("FR-fr", {
 							month: "short",
 							year: "numeric"
 						}).toUpperCase().replace(".", "") || "EN COUR"}
 					</div>
+					<div class="flex-1 border-b border-(--color-card-subtext)/30" />
 					<div class="flex gap-x-3">
 						{ project.github !== undefined &&
 							<ProjectLink 
