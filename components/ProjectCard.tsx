@@ -1,6 +1,5 @@
 import { JSXElement } from "/types/JSXElement.ts";
 import { ProjectType } from "/types/ProjectType.ts";
-import { Card } from "./Card.tsx";
 import { IconCodeTag, IconGithub, IconLink } from "#icons";
 
 interface ProjectCardProps {
@@ -9,8 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({project} : ProjectCardProps) {
 	return (
-		<Card id={project.slug}>
-			<div class="flex flex-col gap-y-6">
+			<div class="flex flex-col gap-y-5">
 				<div class="flex flex-col gap-y-3">
 					<div class="flex flex-col">
 						<div class="text-2xl font-bold text-title">{project.title}</div>
@@ -26,7 +24,7 @@ export function ProjectCard({project} : ProjectCardProps) {
 					</div>
 				</div>
 				{ project.image !== undefined && 
-					<div class="relative overflow-hidden lg:w-4/5 bg-gray-50 border border-primary/30 rounded-xl shadow-[0_0_40px_-8px] shadow-primary/50 after:absolute after:top-0 after:h-full after:w-full after:bg-linear-to-t after:from-primary/40 after:to-black/10 after:to-50%">
+					<div class="relative overflow-hidden lg:w-4/5 bg-gray-50 border border-primary/10 rounded-xl shadow-lg">
 						<img
 							class="w-full" 
 							src={project.image}
@@ -34,6 +32,12 @@ export function ProjectCard({project} : ProjectCardProps) {
 					</div>
 				}
 				<div class="flex justify-between items-end">
+					<div class="text-xs font-light text-(--color-card-subtext)">
+						{project.create_at?.toLocaleDateString("FR-fr", {
+							month: "short",
+							year: "numeric"
+						}).toUpperCase().replace(".", "") || "EN COUR"}
+					</div>
 					<div class="flex gap-x-3">
 						{ project.github !== undefined &&
 							<ProjectLink 
@@ -50,15 +54,8 @@ export function ProjectCard({project} : ProjectCardProps) {
 							/>
 						}
 					</div>
-					<div class="text-xs font-light text-(--color-card-subtext)">
-						{project.create_at?.toLocaleDateString("FR-fr", {
-							month: "short",
-							year: "numeric"
-						}).toUpperCase().replace(".", "") || "EN COUR"}
-					</div>
 				</div>
 			</div>
-		</Card>
 	)
 }
 
