@@ -91,3 +91,11 @@ body {
 a {
 	color: var(--color-primary);
 }
+
+.transition-inherit {
+	transition: inherit;
+}
+
+.ease-out-cubic {
+	transition-timing-function: cubic-bezier(0.22, 0.665, 0.34, 0.875)
+}
