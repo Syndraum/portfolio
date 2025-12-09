@@ -24,7 +24,7 @@ export function ProjectCard({project} : ProjectCardProps) {
 					</div>
 				</div>
 				{ project.image !== undefined && 
-					<div class="relative overflow-hidden lg:w-4/5 bg-gray-50 border border-primary/10 rounded-xl shadow-lg">
+					<div class="relative overflow-hidden lg:w-4/5">
 						<img
 							class="w-full" 
 							src={project.image}
