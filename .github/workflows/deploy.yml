@@ -21,6 +21,9 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Install node_module
+        run: "deno install"
+
       - name: Build step
         run: "deno task build"
 
