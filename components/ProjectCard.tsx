@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({project} : ProjectCardProps) {
 	return (
-			<div class="flex flex-col gap-y-5">
+			<div class="flex flex-col gap-y-5 group-hover/card:opacity-30 hover:opacity-100 duration-300 ease-out-cubic">
 				<div class="flex flex-col gap-y-3">
 					<div class="flex flex-col">
 						<div class="text-2xl font-bold text-title">{project.title}</div>
@@ -24,7 +24,7 @@ export function ProjectCard({project} : ProjectCardProps) {
 					</div>
 				</div>
 				{ project.image !== undefined && 
-					<div class="relative overflow-hidden lg:w-4/5 bg-gray-50 border border-primary/10 rounded-xl shadow-lg">
+					<div class="relative overflow-hidden lg:w-4/5">
 						<img
 							class="w-full" 
 							src={project.image}

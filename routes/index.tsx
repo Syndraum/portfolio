@@ -55,7 +55,7 @@ export default function Home(props: PageProps<HomeProps>) {
 						Mes projets
 					</Title>
 				</div>
-				<div class="flex flex-col gap-y-8">
+				<div class="flex flex-col gap-y-8 group/card">
 					{ props.data.projects.map(project => (
 						<ProjectCard key={project.slug} project={project}/>
 					))}
