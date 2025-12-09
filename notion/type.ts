@@ -1,4 +1,4 @@
-import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints"
+import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js"
 
 type PageProperties = PageObjectResponse["properties"]
 type PagePropertiesTypes = PageProperties[string]["type"]
